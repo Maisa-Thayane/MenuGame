@@ -31,7 +31,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.btnEscolherImagem = new System.Windows.Forms.Button();
-            this.pbImagem = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRaca = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,10 +42,9 @@
             this.cbRaca = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.lstPersonagens = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
+            this.pbImagem = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
@@ -74,14 +72,6 @@
             this.btnEscolherImagem.Text = "Imagem";
             this.btnEscolherImagem.UseVisualStyleBackColor = true;
             this.btnEscolherImagem.Click += new System.EventHandler(this.btnEscolherImagem_Click);
-            // 
-            // pbImagem
-            // 
-            this.pbImagem.Location = new System.Drawing.Point(212, 12);
-            this.pbImagem.Name = "pbImagem";
-            this.pbImagem.Size = new System.Drawing.Size(155, 100);
-            this.pbImagem.TabIndex = 12;
-            this.pbImagem.TabStop = false;
             // 
             // label2
             // 
@@ -178,31 +168,20 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnEditar
+            // pbImagem
             // 
-            this.btnEditar.Location = new System.Drawing.Point(468, 415);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 18;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // lstPersonagens
-            // 
-            this.lstPersonagens.FormattingEnabled = true;
-            this.lstPersonagens.Location = new System.Drawing.Point(253, 293);
-            this.lstPersonagens.Name = "lstPersonagens";
-            this.lstPersonagens.Size = new System.Drawing.Size(120, 95);
-            this.lstPersonagens.TabIndex = 19;
+            this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImagem.Location = new System.Drawing.Point(212, 12);
+            this.pbImagem.Name = "pbImagem";
+            this.pbImagem.Size = new System.Drawing.Size(155, 100);
+            this.pbImagem.TabIndex = 12;
+            this.pbImagem.TabStop = false;
             // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 562);
-            this.Controls.Add(this.lstPersonagens);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.cbRaca);
@@ -220,8 +199,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Cadastrar";
             this.Text = "Cadastrar";
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,7 +222,5 @@
         private System.Windows.Forms.ComboBox cbRaca;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.ListBox lstPersonagens;
     }
 }

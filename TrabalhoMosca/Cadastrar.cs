@@ -14,27 +14,18 @@ namespace TrabalhoMosca
         public Cadastrar(Form1 form, Personagem personagem = null, int indice = -1)
         {
             InitializeComponent();
-            formPrincipal = form;
-            estouEditando = personagem != null;
-            indiceEditando = indice;
-            cbTipo.Items.AddRange(new string[] {
-    "teste1", "teste2", "teste3", "teste4", "teste5"});
 
+            formPrincipal = form;
+            estouEditando = (personagem != null);
+            indiceEditando = indice;
+
+            cbTipo.Items.AddRange(new string[] {
+                "teste1", "teste2", "teste3", "teste4", "teste5"});
             cbRaca.Items.AddRange(new string[] {
-    "teste6", "teste7", "teste8", "teste9", "teste10"});
-            AtualizarLista();
+                "teste6", "teste7", "teste8", "teste9", "teste10"});
 
             if (estouEditando)
-            {
                 CarregarNosCampos(personagem);
-            }
-        }
-
-        private void AtualizarLista()
-        {
-            lstPersonagens.Items.Clear();
-            foreach (var p in PersonagemLista.ObterTodos())
-                lstPersonagens.Items.Add(p.Nome);
         }
 
         private void CarregarNosCampos(Personagem p)
@@ -44,14 +35,21 @@ namespace TrabalhoMosca
             cbRaca.Text = p.Raca;
             nudNivel.Value = p.Nivel;
             txtImagemPath.Text = p.ImagemPath;
-            try { pbImagem.Image = Image.FromFile(p.ImagemPath); }
-            catch { pbImagem.Image = null; }
+            try
+            {
+                pbImagem.Image = Image.FromFile(p.ImagemPath);
+            }
+            catch
+            {
+                pbImagem.Image = null;
+            }
         }
 
         private void btnEscolherImagem_Click(object sender, EventArgs e)
         {
             using (var dlg = new OpenFileDialog())
             {
+                dlg.Filter = "Arquivos de Imagem|*.jpg;*.jpeg;*.png;*.bmp";
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     txtImagemPath.Text = dlg.FileName;
@@ -100,22 +98,6 @@ namespace TrabalhoMosca
         {
             this.Hide();
             formPrincipal.Show();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            int indice = lstPersonagens.SelectedIndex;
-            if (indice < 0)
-            {
-                MessageBox.Show("Selecione um personagem para editar.");
-                return;
-            }
-
-            var p = PersonagemLista.ObterTodos()[indice];
-            estouEditando = true;
-            indiceEditando = indice;
-
-            CarregarNosCampos(p);
         }
     }
 }

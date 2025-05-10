@@ -30,14 +30,14 @@ namespace TrabalhoMosca
         private void label3_Click(object sender, EventArgs e)  
         {
             this.Hide();
-            var editar = new Editar();
+            var editar = new Editar(this);
             editar.Show();
         }
 
         private void label2_Click(object sender, EventArgs e) 
         {
             this.Hide();
-            var busca = new BuscarPers();
+            var busca = new BuscarPers(this);
             busca.Show();
         }
     }
