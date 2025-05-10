@@ -10,11 +10,35 @@ using System.Windows.Forms;
 
 namespace TrabalhoMosca
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+        }
+        public void AtualizarLista()
+        {
+            
+        }
+        private void label1_Click(object sender, EventArgs e)  
+        {
+            this.Hide();
+            var cadastro = new Cadastrar(this);
+            cadastro.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)  
+        {
+            this.Hide();
+            var editar = new Editar();
+            editar.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e) 
+        {
+            this.Hide();
+            var busca = new BuscarPers();
+            busca.Show();
         }
     }
 }
