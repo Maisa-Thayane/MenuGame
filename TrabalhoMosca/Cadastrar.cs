@@ -14,7 +14,6 @@ namespace TrabalhoMosca
             InitializeComponent();
             formPrincipal = form;
 
-                CarregarNosCampos(personagem);
             cbTipo.Items.AddRange(new string[] { "teste1", "teste2", "teste3", "teste4", "teste5" });
             cbRaca.Items.AddRange(new string[] { "teste6", "teste7", "teste8", "teste9", "teste10" });
         }
