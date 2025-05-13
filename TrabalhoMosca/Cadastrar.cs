@@ -8,53 +8,48 @@ namespace TrabalhoMosca
     public partial class Cadastrar : Form
     {
         private Form1 formPrincipal;
-        private bool estouEditando;
-        private int indiceEditando;
 
-        public Cadastrar(Form1 form, Personagem personagem = null, int indice = -1)
+        public Cadastrar(Form1 form)
         {
             InitializeComponent();
-
             formPrincipal = form;
-            estouEditando = (personagem != null);
-            indiceEditando = indice;
 
-            cbTipo.Items.AddRange(new string[] {
-                "teste1", "teste2", "teste3", "teste4", "teste5"});
-            cbRaca.Items.AddRange(new string[] {
-                "teste6", "teste7", "teste8", "teste9", "teste10"});
-
-            if (estouEditando)
                 CarregarNosCampos(personagem);
-        }
-
-        private void CarregarNosCampos(Personagem p)
-        {
-            txtNome.Text = p.Nome;
-            cbTipo.Text = p.Tipo;
-            cbRaca.Text = p.Raca;
-            nudNivel.Value = p.Nivel;
-            txtImagemPath.Text = p.ImagemPath;
-            try
-            {
-                pbImagem.Image = Image.FromFile(p.ImagemPath);
-            }
-            catch
-            {
-                pbImagem.Image = null;
-            }
+            cbTipo.Items.AddRange(new string[] { "teste1", "teste2", "teste3", "teste4", "teste5" });
+            cbRaca.Items.AddRange(new string[] { "teste6", "teste7", "teste8", "teste9", "teste10" });
         }
 
         private void btnEscolherImagem_Click(object sender, EventArgs e)
         {
-            using (var dlg = new OpenFileDialog())
+            string projectDir = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", ".."));
+            string resourcesSpritesDir = Path.Combine(projectDir, "Resources", "Sprites");
+
+            if (!Directory.Exists(resourcesSpritesDir))
             {
-                dlg.Filter = "Arquivos de Imagem|*.jpg;*.jpeg;*.png;*.bmp";
+                MessageBox.Show($"Pasta não encontrada: {resourcesSpritesDir}");
+                return;
+            }
+
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.InitialDirectory = resourcesSpritesDir;
+                dlg.Filter = "Arquivos de Imagem (*.png;*.jpg;*.jpeg;*.bmp)|*.png;*.jpg;*.jpeg;*.bmp";
+                dlg.Title = "Escolher sprite do personagem";
+
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    txtImagemPath.Text = dlg.FileName;
-                    try { pbImagem.Image = Image.FromFile(dlg.FileName); }
-                    catch { MessageBox.Show("Não foi possível carregar a imagem."); }
+                    string fullPath = dlg.FileName;
+                    string fileName = Path.GetFileName(fullPath);
+                    txtImagemPath.Text = fileName;
+
+                    try
+                    {
+                        pbImagem.Image = Image.FromFile(fullPath);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Não foi possível carregar a imagem selecionada.");
+                    }
                 }
             }
         }
@@ -64,7 +59,7 @@ namespace TrabalhoMosca
             if (string.IsNullOrWhiteSpace(txtNome.Text) ||
                 string.IsNullOrWhiteSpace(cbTipo.Text) ||
                 string.IsNullOrWhiteSpace(cbRaca.Text) ||
-                !File.Exists(txtImagemPath.Text))
+                string.IsNullOrWhiteSpace(txtImagemPath.Text))
             {
                 MessageBox.Show("Preencha todos os campos corretamente.");
                 return;
@@ -78,17 +73,8 @@ namespace TrabalhoMosca
                 txtImagemPath.Text.Trim()
             );
 
-            if (estouEditando)
-            {
-                PersonagemLista.Update(indiceEditando, p);
-                MessageBox.Show("Personagem atualizado!");
-            }
-            else
-            {
-                PersonagemLista.Add(p);
-                MessageBox.Show("Personagem cadastrado!");
-            }
-
+            PersonagemLista.Add(p);
+            MessageBox.Show("Personagem cadastrado com sucesso!");
             formPrincipal.AtualizarLista();
             this.Hide();
             formPrincipal.Show();

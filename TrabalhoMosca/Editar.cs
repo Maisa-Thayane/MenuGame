@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrabalhoMosca
@@ -21,10 +15,8 @@ namespace TrabalhoMosca
             InitializeComponent();
             formPrincipal = form;
 
-            cbTipo.Items.AddRange(new string[] {
-                "teste1","teste2","teste3","teste4","teste5"});
-            cbRaca.Items.AddRange(new string[] {
-                "teste6","teste7","teste8","teste9","teste10"});
+            cbTipo.Items.AddRange(new string[] { "teste1", "teste2", "teste3", "teste4", "teste5" });
+            cbRaca.Items.AddRange(new string[] { "teste6", "teste7", "teste8", "teste9", "teste10" });
 
             AtualizarLista();
         }
@@ -42,7 +34,7 @@ namespace TrabalhoMosca
         private void lstPersonagens_SelectedIndexChanged(object sender, EventArgs e)
         {
             indiceEditando = lstPersonagens.SelectedIndex;
-            CarregarNosCamposPorÍndice();
+            CarregarNosCamposPorIndice();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -53,10 +45,10 @@ namespace TrabalhoMosca
                 MessageBox.Show("Selecione um personagem antes de clicar em Editar.");
                 return;
             }
-            CarregarNosCamposPorÍndice();
+            CarregarNosCamposPorIndice();
         }
 
-        private void CarregarNosCamposPorÍndice()
+        private void CarregarNosCamposPorIndice()
         {
             if (indiceEditando < 0) return;
 
@@ -65,20 +57,45 @@ namespace TrabalhoMosca
             cbTipo.Text = pers.Tipo;
             cbRaca.Text = pers.Raca;
             nudNivel.Value = pers.Nivel;
-            txtImagemPath.Text = pers.ImagemPath;
-            try { pbImagem.Image = Image.FromFile(pers.ImagemPath); }
-            catch { pbImagem.Image = null; }
+
+            string projectDir = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", ".."));
+            string resourcesSpritesDir = Path.Combine(projectDir, "Resources", "Sprites");
+            string fullPath = Path.Combine(resourcesSpritesDir, pers.ImagemPath);
+
+            txtImagemPath.Text = fullPath;
+
+            try
+            {
+                pbImagem.Image = Image.FromFile(fullPath);
+            }
+            catch
+            {
+                pbImagem.Image = null;
+            }
         }
 
         private void btnEscolherImagem_Click_1(object sender, EventArgs e)
         {
-            using (var dlg = new OpenFileDialog())
+            string projectDir = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", ".."));
+            string resourcesSpritesDir = Path.Combine(projectDir, "Resources", "Sprites");
+
+            if (!Directory.Exists(resourcesSpritesDir))
             {
-                dlg.Filter = "Arquivos de Imagem|*.jpg;*.jpeg;*.png;*.bmp";
+                MessageBox.Show($"Pasta não encontrada: {resourcesSpritesDir}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.InitialDirectory = resourcesSpritesDir;
+                dlg.Filter = "Imagens (*.png;*.jpg;*.bmp)|*.png;*.jpg;*.bmp";
+                dlg.Title = "Escolher sprite do personagem";
+
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    txtImagemPath.Text = dlg.FileName;
-                    try { pbImagem.Image = Image.FromFile(dlg.FileName); }
+                    string fullSel = dlg.FileName;
+                    txtImagemPath.Text = fullSel;
+                    try { pbImagem.Image = Image.FromFile(fullSel); }
                     catch { MessageBox.Show("Não foi possível carregar a imagem."); }
                 }
             }
@@ -95,32 +112,25 @@ namespace TrabalhoMosca
             if (string.IsNullOrWhiteSpace(txtNome.Text) ||
                 string.IsNullOrWhiteSpace(cbTipo.Text) ||
                 string.IsNullOrWhiteSpace(cbRaca.Text) ||
-                !File.Exists(txtImagemPath.Text))
+                string.IsNullOrWhiteSpace(txtImagemPath.Text))
             {
                 MessageBox.Show("Preencha todos os campos corretamente e selecione uma imagem válida.");
                 return;
             }
+
             var atualizado = new Personagem(
-                txtNome.Text.Trim(),
-                cbTipo.Text.Trim(),
-                cbRaca.Text.Trim(),
-                (int)nudNivel.Value,
-                txtImagemPath.Text.Trim()
-            );
+                txtNome.Text.Trim(), cbTipo.Text.Trim(), cbRaca.Text.Trim(), (int)nudNivel.Value, txtImagemPath.Text.Trim());
 
             PersonagemLista.Update(indiceEditando, atualizado);
             MessageBox.Show("Personagem atualizado com sucesso!");
-
             AtualizarLista();
         }
-
-
 
         private void LimparCampos()
         {
             txtNome.Clear();
-            cbTipo.Text = "";
-            cbRaca.Text = "";
+            cbTipo.Text = string.Empty;
+            cbRaca.Text = string.Empty;
             nudNivel.Value = nudNivel.Minimum;
             txtImagemPath.Clear();
             pbImagem.Image = null;

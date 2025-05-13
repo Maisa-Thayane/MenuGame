@@ -34,6 +34,7 @@
             this.lblResumo = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.pbImagem = new System.Windows.Forms.PictureBox();
+            this.txtImagemPath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,11 +92,19 @@
             this.pbImagem.TabIndex = 4;
             this.pbImagem.TabStop = false;
             // 
+            // txtImagemPath
+            // 
+            this.txtImagemPath.Location = new System.Drawing.Point(298, 272);
+            this.txtImagemPath.Name = "txtImagemPath";
+            this.txtImagemPath.Size = new System.Drawing.Size(100, 20);
+            this.txtImagemPath.TabIndex = 24;
+            // 
             // BuscarPers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtImagemPath);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.lblResumo);
@@ -118,5 +127,6 @@
         private System.Windows.Forms.Label lblResumo;
         private System.Windows.Forms.PictureBox pbImagem;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.TextBox txtImagemPath;
     }
 }
