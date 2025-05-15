@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastrar));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.btnEscolherImagem = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.lblImagem = new System.Windows.Forms.Label();
             this.txtImagemPath = new System.Windows.Forms.TextBox();
             this.nudNivel = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.cbTipo = new System.Windows.Forms.ComboBox();
             this.cbRaca = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -49,139 +49,170 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(592, 51);
+            this.txtNome.Location = new System.Drawing.Point(613, 63);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(160, 22);
             this.txtNome.TabIndex = 5;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(589, 35);
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblNome.Font = new System.Drawing.Font("Trajan Pro", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNome.Location = new System.Drawing.Point(609, 43);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
+            this.lblNome.Size = new System.Drawing.Size(52, 16);
             this.lblNome.TabIndex = 13;
-            this.lblNome.Text = "Nome";
+            this.lblNome.Text = "Nome:";
             // 
             // btnEscolherImagem
             // 
-            this.btnEscolherImagem.Location = new System.Drawing.Point(592, 332);
+            this.btnEscolherImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.btnEscolherImagem.Font = new System.Drawing.Font("Trajan Pro", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscolherImagem.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEscolherImagem.Location = new System.Drawing.Point(640, 323);
+            this.btnEscolherImagem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEscolherImagem.Name = "btnEscolherImagem";
-            this.btnEscolherImagem.Size = new System.Drawing.Size(75, 23);
+            this.btnEscolherImagem.Size = new System.Drawing.Size(100, 28);
             this.btnEscolherImagem.TabIndex = 10;
             this.btnEscolherImagem.Text = "Imagem";
-            this.btnEscolherImagem.UseVisualStyleBackColor = true;
+            this.btnEscolherImagem.UseVisualStyleBackColor = false;
             this.btnEscolherImagem.Click += new System.EventHandler(this.btnEscolherImagem_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(589, 78);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Trajan Pro", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(609, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Tipo";
+            this.label2.Text = "Tipo:";
             // 
             // lblRaca
             // 
             this.lblRaca.AutoSize = true;
-            this.lblRaca.Location = new System.Drawing.Point(593, 147);
+            this.lblRaca.BackColor = System.Drawing.Color.Transparent;
+            this.lblRaca.Font = new System.Drawing.Font("Trajan Pro", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRaca.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRaca.Location = new System.Drawing.Point(610, 158);
+            this.lblRaca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRaca.Name = "lblRaca";
-            this.lblRaca.Size = new System.Drawing.Size(33, 13);
+            this.lblRaca.Size = new System.Drawing.Size(45, 16);
             this.lblRaca.TabIndex = 2;
-            this.lblRaca.Text = "Raca";
+            this.lblRaca.Text = "Raça:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(595, 215);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Trajan Pro", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(610, 216);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Nivel";
+            this.label4.Text = "Nivel:";
             // 
             // lblImagem
             // 
             this.lblImagem.AutoSize = true;
-            this.lblImagem.Location = new System.Drawing.Point(589, 281);
+            this.lblImagem.BackColor = System.Drawing.Color.Transparent;
+            this.lblImagem.Font = new System.Drawing.Font("Trajan Pro", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagem.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblImagem.Location = new System.Drawing.Point(610, 273);
+            this.lblImagem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImagem.Name = "lblImagem";
-            this.lblImagem.Size = new System.Drawing.Size(44, 13);
+            this.lblImagem.Size = new System.Drawing.Size(65, 16);
             this.lblImagem.TabIndex = 4;
-            this.lblImagem.Text = "Imagem";
+            this.lblImagem.Text = "Imagem:";
             // 
             // txtImagemPath
             // 
-            this.txtImagemPath.Location = new System.Drawing.Point(592, 306);
+            this.txtImagemPath.Location = new System.Drawing.Point(612, 293);
+            this.txtImagemPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtImagemPath.Name = "txtImagemPath";
-            this.txtImagemPath.Size = new System.Drawing.Size(100, 20);
+            this.txtImagemPath.Size = new System.Drawing.Size(160, 22);
             this.txtImagemPath.TabIndex = 9;
             // 
             // nudNivel
             // 
-            this.nudNivel.Location = new System.Drawing.Point(592, 240);
+            this.nudNivel.Location = new System.Drawing.Point(613, 236);
+            this.nudNivel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudNivel.Name = "nudNivel";
-            this.nudNivel.Size = new System.Drawing.Size(120, 20);
+            this.nudNivel.Size = new System.Drawing.Size(160, 22);
             this.nudNivel.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-1, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome";
             // 
             // cbTipo
             // 
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(591, 107);
+            this.cbTipo.Location = new System.Drawing.Point(613, 116);
+            this.cbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(121, 21);
+            this.cbTipo.Size = new System.Drawing.Size(160, 24);
             this.cbTipo.TabIndex = 14;
             // 
             // cbRaca
             // 
             this.cbRaca.FormattingEnabled = true;
-            this.cbRaca.Location = new System.Drawing.Point(591, 172);
+            this.cbRaca.Location = new System.Drawing.Point(612, 178);
+            this.cbRaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbRaca.Name = "cbRaca";
-            this.cbRaca.Size = new System.Drawing.Size(121, 21);
+            this.cbRaca.Size = new System.Drawing.Size(160, 24);
             this.cbRaca.TabIndex = 15;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(777, 366);
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.btnSalvar.Font = new System.Drawing.Font("Trajan Pro", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalvar.Location = new System.Drawing.Point(935, 454);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(100, 28);
             this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(768, 415);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Trajan Pro", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Location = new System.Drawing.Point(935, 513);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pbImagem
             // 
             this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagem.Location = new System.Drawing.Point(212, 12);
+            this.pbImagem.Location = new System.Drawing.Point(107, 43);
+            this.pbImagem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbImagem.Name = "pbImagem";
-            this.pbImagem.Size = new System.Drawing.Size(155, 100);
+            this.pbImagem.Size = new System.Drawing.Size(207, 123);
             this.pbImagem.TabIndex = 12;
             this.pbImagem.TabStop = false;
             // 
             // Cadastrar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 562);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.cbRaca);
@@ -196,9 +227,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblRaca);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Cadastrar";
             this.Text = "Cadastrar";
+            this.Load += new System.EventHandler(this.Cadastrar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).EndInit();
             this.ResumeLayout(false);
@@ -217,7 +249,6 @@
         private System.Windows.Forms.Label lblImagem;
         private System.Windows.Forms.TextBox txtImagemPath;
         private System.Windows.Forms.NumericUpDown nudNivel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.ComboBox cbRaca;
         private System.Windows.Forms.Button btnSalvar;

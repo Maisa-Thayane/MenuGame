@@ -84,5 +84,10 @@ namespace TrabalhoMosca
             this.Hide();
             formPrincipal.Show();
         }
+
+        private void Cadastrar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

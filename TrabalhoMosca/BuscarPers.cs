@@ -68,5 +68,10 @@ namespace TrabalhoMosca
             this.Hide();
             formPrincipal.Show();
         }
+
+        private void txtImagemPath_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

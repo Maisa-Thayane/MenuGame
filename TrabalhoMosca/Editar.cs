@@ -141,5 +141,15 @@ namespace TrabalhoMosca
             this.Hide();
             formPrincipal.Show();
         }
+
+        private void Editar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
