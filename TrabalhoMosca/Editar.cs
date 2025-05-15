@@ -141,5 +141,25 @@ namespace TrabalhoMosca
             this.Hide();
             formPrincipal.Show();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            int selecionado = lstPersonagens.SelectedIndex;
+            if (selecionado < 0)
+            {
+                MessageBox.Show("Selecione um personagem antes de clicar em Excluir.");
+                return;
+            }
+
+            var resultado = MessageBox.Show(
+                $"Deseja realmente excluir “{lstPersonagens.Items[selecionado]}”?",
+                "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado != DialogResult.Yes) return;
+
+            PersonagemLista.Remover(selecionado);
+            MessageBox.Show("Personagem excluído com sucesso!");
+            AtualizarLista();
+        }
     }
 }

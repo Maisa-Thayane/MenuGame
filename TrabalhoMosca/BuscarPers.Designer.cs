@@ -35,6 +35,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.pbImagem = new System.Windows.Forms.PictureBox();
             this.txtImagemPath = new System.Windows.Forms.TextBox();
+            this.btnSalvarJson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,11 +100,22 @@
             this.txtImagemPath.Size = new System.Drawing.Size(100, 20);
             this.txtImagemPath.TabIndex = 24;
             // 
+            // btnSalvarJson
+            // 
+            this.btnSalvarJson.Location = new System.Drawing.Point(440, 323);
+            this.btnSalvarJson.Name = "btnSalvarJson";
+            this.btnSalvarJson.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvarJson.TabIndex = 25;
+            this.btnSalvarJson.Text = "button1";
+            this.btnSalvarJson.UseVisualStyleBackColor = true;
+            this.btnSalvarJson.Click += new System.EventHandler(this.btnSalvarJson_Click);
+            // 
             // BuscarPers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSalvarJson);
             this.Controls.Add(this.txtImagemPath);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.pbImagem);
@@ -128,5 +140,6 @@
         private System.Windows.Forms.PictureBox pbImagem;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TextBox txtImagemPath;
+        private System.Windows.Forms.Button btnSalvarJson;
     }
 }

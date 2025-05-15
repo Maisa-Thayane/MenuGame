@@ -44,6 +44,7 @@
             this.lstPersonagens = new System.Windows.Forms.ListBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.pbImagem = new System.Windows.Forms.PictureBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.SuspendLayout();
@@ -187,11 +188,22 @@
             this.pbImagem.TabIndex = 26;
             this.pbImagem.TabStop = false;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(363, 214);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 34;
+            this.btnExcluir.Text = "Cancelar";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lstPersonagens);
             this.Controls.Add(this.btnCancelar);
@@ -235,5 +247,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstPersonagens;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }
