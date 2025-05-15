@@ -14,9 +14,11 @@ namespace TrabalhoMosca
         {
             InitializeComponent();
             formPrincipal = form;
-
-            cbTipo.Items.AddRange(new string[] { "teste1", "teste2", "teste3", "teste4", "teste5" });
-            cbRaca.Items.AddRange(new string[] { "teste6", "teste7", "teste8", "teste9", "teste10" });
+            cbNome.Items.AddRange(new string[] { "Sly", "Iselda", "Nailsmith",
+                "Mato", "Oro", "Sheo", "Cloth", "Cornifer", "Hornet", "Quirrel", "Zote",
+            "Bretta","Seer", "Grimm"});
+            cbTipo.Items.AddRange(new string[] { "Merchants", "Nailmasters", "Wanderers", "Quest NPCs", "Miscellaneous" });
+            cbRaca.Items.AddRange(new string[] { "The Grimm Troupe", "Spider Tribe", "Void", "Moth Tribe"});
 
             AtualizarLista();
         }
@@ -53,7 +55,7 @@ namespace TrabalhoMosca
             if (indiceEditando < 0) return;
 
             var pers = PersonagemLista.ObterTodos()[indiceEditando];
-            txtNome.Text = pers.Nome;
+            cbNome.Text = pers.Nome;
             cbTipo.Text = pers.Tipo;
             cbRaca.Text = pers.Raca;
             nudNivel.Value = pers.Nivel;
@@ -109,7 +111,7 @@ namespace TrabalhoMosca
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(txtNome.Text) ||
+            if (string.IsNullOrWhiteSpace(cbNome.Text) ||
                 string.IsNullOrWhiteSpace(cbTipo.Text) ||
                 string.IsNullOrWhiteSpace(cbRaca.Text) ||
                 string.IsNullOrWhiteSpace(txtImagemPath.Text))
@@ -119,7 +121,7 @@ namespace TrabalhoMosca
             }
 
             var atualizado = new Personagem(
-                txtNome.Text.Trim(), cbTipo.Text.Trim(), cbRaca.Text.Trim(), (int)nudNivel.Value, txtImagemPath.Text.Trim());
+                cbNome.Text.Trim(), cbTipo.Text.Trim(), cbRaca.Text.Trim(), (int)nudNivel.Value, txtImagemPath.Text.Trim());
 
             PersonagemLista.Update(indiceEditando, atualizado);
             MessageBox.Show("Personagem atualizado com sucesso!");
@@ -128,7 +130,7 @@ namespace TrabalhoMosca
 
         private void LimparCampos()
         {
-            txtNome.Clear();
+            cbNome.Text = string.Empty;
             cbTipo.Text = string.Empty;
             cbRaca.Text = string.Empty;
             nudNivel.Value = nudNivel.Minimum;

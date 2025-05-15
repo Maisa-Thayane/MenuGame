@@ -14,8 +14,11 @@ namespace TrabalhoMosca
             InitializeComponent();
             formPrincipal = form;
 
-            cbTipo.Items.AddRange(new string[] { "teste1", "teste2", "teste3", "teste4", "teste5" });
-            cbRaca.Items.AddRange(new string[] { "teste6", "teste7", "teste8", "teste9", "teste10" });
+            cbNome.Items.AddRange(new string[] { "Sly", "Iselda", "Nailsmith",
+                "Mato", "Oro", "Sheo", "Cloth", "Cornifer", "Hornet", "Quirrel", "Zote",
+            "Bretta","Seer", "Grimm"});
+            cbTipo.Items.AddRange(new string[] { "Merchants", "Nailmasters", "Wanderers", "Quest NPCs", "Miscellaneous" });
+            cbRaca.Items.AddRange(new string[] { "The Grimm Troupe", "Spider Tribe", "Void", "Moth Tribe" });
         }
 
         private void btnEscolherImagem_Click(object sender, EventArgs e)
@@ -55,7 +58,7 @@ namespace TrabalhoMosca
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNome.Text) ||
+            if (string.IsNullOrWhiteSpace(cbNome.Text) ||
                 string.IsNullOrWhiteSpace(cbTipo.Text) ||
                 string.IsNullOrWhiteSpace(cbRaca.Text) ||
                 string.IsNullOrWhiteSpace(txtImagemPath.Text))
@@ -65,7 +68,7 @@ namespace TrabalhoMosca
             }
 
             var p = new Personagem(
-                txtNome.Text.Trim(),
+                cbNome.Text.Trim(),
                 cbTipo.Text.Trim(),
                 cbRaca.Text.Trim(),
                 (int)nudNivel.Value,
@@ -86,6 +89,11 @@ namespace TrabalhoMosca
         }
 
         private void Cadastrar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
