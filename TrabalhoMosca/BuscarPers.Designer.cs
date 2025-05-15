@@ -36,6 +36,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.pbImagem = new System.Windows.Forms.PictureBox();
             this.txtImagemPath = new System.Windows.Forms.TextBox();
+            this.btnSalvarJson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,13 +120,21 @@
             this.txtImagemPath.TabIndex = 24;
             this.txtImagemPath.TextChanged += new System.EventHandler(this.txtImagemPath_TextChanged);
             // 
+            // btnSalvarJson
+            // 
+            this.btnSalvarJson.Location = new System.Drawing.Point(440, 323);
+            this.btnSalvarJson.Name = "btnSalvarJson";
+            this.btnSalvarJson.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvarJson.TabIndex = 25;
+            this.btnSalvarJson.Text = "button1";
+            this.btnSalvarJson.UseVisualStyleBackColor = true;
+            this.btnSalvarJson.Click += new System.EventHandler(this.btnSalvarJson_Click);
+            // 
             // BuscarPers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtImagemPath);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.pbImagem);
@@ -151,5 +160,6 @@
         private System.Windows.Forms.PictureBox pbImagem;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TextBox txtImagemPath;
+        private System.Windows.Forms.Button btnSalvarJson;
     }
 }

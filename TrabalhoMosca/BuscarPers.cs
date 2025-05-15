@@ -4,6 +4,8 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace TrabalhoMosca
 {
@@ -67,11 +69,6 @@ namespace TrabalhoMosca
         {
             this.Hide();
             formPrincipal.Show();
-        }
-
-        private void txtImagemPath_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
