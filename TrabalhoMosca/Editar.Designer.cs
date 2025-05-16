@@ -205,10 +205,11 @@
             // 
             // pbImagem
             // 
-            this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagem.Location = new System.Drawing.Point(80, 35);
+            this.pbImagem.BackColor = System.Drawing.Color.Transparent;
+            this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbImagem.Location = new System.Drawing.Point(38, 8);
             this.pbImagem.Name = "pbImagem";
-            this.pbImagem.Size = new System.Drawing.Size(155, 100);
+            this.pbImagem.Size = new System.Drawing.Size(238, 181);
             this.pbImagem.TabIndex = 26;
             this.pbImagem.TabStop = false;
             // 

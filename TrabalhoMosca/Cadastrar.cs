@@ -97,5 +97,45 @@ namespace TrabalhoMosca
         {
 
         }
+
+        private void BtnAleatorio_Click(object sender, EventArgs e)
+        {
+            {
+                string[] nomes = { "Sly", "Iselda", "Nailsmith", "Mato", "Oro", "Sheo", "Cloth",
+        "Cornifer", "Hornet", "Quirrel", "Zote", "Bretta", "Seer", "Grimm" };
+                string[] tipos = { "Merchants", "Nailmasters", "Wanderers", "Quest NPCs", "Miscellaneous" };
+                string[] racas = { "The Grimm Troupe", "Spider Tribe", "Void", "Moth Tribe" };
+
+                Random rand = new Random();
+
+                cbNome.Text = nomes[rand.Next(nomes.Length)];
+                cbTipo.Text = tipos[rand.Next(tipos.Length)];
+                cbRaca.Text = racas[rand.Next(racas.Length)];
+                nudNivel.Value = rand.Next(1, 101);
+
+                string projectDir = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", ".."));
+                string resourcesSpritesDir = Path.Combine(projectDir, "Resources", "Sprites");
+
+                if (Directory.Exists(resourcesSpritesDir))
+                {
+                    var imagens = Directory.GetFiles(resourcesSpritesDir, "*.png");
+                    if (imagens.Length > 0)
+                    {
+                        var aleatorio = new Random();
+                        string imagemAleatoria = imagens[aleatorio.Next(imagens.Length)];
+
+                        txtImagemPath.Text = imagemAleatoria;
+                        try
+                        {
+                            pbImagem.Image = Image.FromFile(imagemAleatoria);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Erro ao carregar imagem.");
+                        }
+                    }
+                }
+            }
+        }
     }
 }

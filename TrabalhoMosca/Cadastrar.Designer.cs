@@ -41,8 +41,9 @@
             this.cbRaca = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pbImagem = new System.Windows.Forms.PictureBox();
             this.cbNome = new System.Windows.Forms.ComboBox();
+            this.BtnAleatorio = new System.Windows.Forms.Button();
+            this.pbImagem = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.SuspendLayout();
@@ -177,15 +178,6 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // pbImagem
-            // 
-            this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagem.Location = new System.Drawing.Point(80, 35);
-            this.pbImagem.Name = "pbImagem";
-            this.pbImagem.Size = new System.Drawing.Size(155, 100);
-            this.pbImagem.TabIndex = 12;
-            this.pbImagem.TabStop = false;
-            // 
             // cbNome
             // 
             this.cbNome.FormattingEnabled = true;
@@ -194,6 +186,29 @@
             this.cbNome.Size = new System.Drawing.Size(121, 21);
             this.cbNome.TabIndex = 18;
             // 
+            // BtnAleatorio
+            // 
+            this.BtnAleatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.BtnAleatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAleatorio.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnAleatorio.Location = new System.Drawing.Point(339, 238);
+            this.BtnAleatorio.Name = "BtnAleatorio";
+            this.BtnAleatorio.Size = new System.Drawing.Size(75, 23);
+            this.BtnAleatorio.TabIndex = 19;
+            this.BtnAleatorio.Text = "Random";
+            this.BtnAleatorio.UseVisualStyleBackColor = false;
+            this.BtnAleatorio.Click += new System.EventHandler(this.BtnAleatorio_Click);
+            // 
+            // pbImagem
+            // 
+            this.pbImagem.BackColor = System.Drawing.Color.Transparent;
+            this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbImagem.Location = new System.Drawing.Point(29, 12);
+            this.pbImagem.Name = "pbImagem";
+            this.pbImagem.Size = new System.Drawing.Size(238, 181);
+            this.pbImagem.TabIndex = 27;
+            this.pbImagem.TabStop = false;
+            // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,13 +216,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbImagem);
+            this.Controls.Add(this.BtnAleatorio);
             this.Controls.Add(this.cbNome);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.cbRaca);
             this.Controls.Add(this.cbTipo);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.nudNivel);
             this.Controls.Add(this.btnEscolherImagem);
             this.Controls.Add(this.txtImagemPath);
@@ -228,7 +244,6 @@
         #endregion
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Button btnEscolherImagem;
-        private System.Windows.Forms.PictureBox pbImagem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblRaca;
         private System.Windows.Forms.Label label4;
@@ -240,5 +255,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cbNome;
+        private System.Windows.Forms.Button BtnAleatorio;
+        private System.Windows.Forms.PictureBox pbImagem;
     }
 }

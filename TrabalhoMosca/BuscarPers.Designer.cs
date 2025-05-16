@@ -33,9 +33,9 @@
             this.lstResultados = new System.Windows.Forms.ListBox();
             this.lblResumo = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.pbImagem = new System.Windows.Forms.PictureBox();
             this.txtImagemPath = new System.Windows.Forms.TextBox();
             this.btnSalvarJson = new System.Windows.Forms.Button();
+            this.pbImagem = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,18 +94,9 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             // 
-            // pbImagem
-            // 
-            this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagem.Location = new System.Drawing.Point(80, 35);
-            this.pbImagem.Name = "pbImagem";
-            this.pbImagem.Size = new System.Drawing.Size(155, 100);
-            this.pbImagem.TabIndex = 4;
-            this.pbImagem.TabStop = false;
-            // 
             // txtImagemPath
             // 
-            this.txtImagemPath.Location = new System.Drawing.Point(122, 140);
+            this.txtImagemPath.Location = new System.Drawing.Point(98, 189);
             this.txtImagemPath.Margin = new System.Windows.Forms.Padding(2);
             this.txtImagemPath.Name = "txtImagemPath";
             this.txtImagemPath.Size = new System.Drawing.Size(76, 20);
@@ -125,15 +116,25 @@
             this.btnSalvarJson.UseVisualStyleBackColor = false;
             this.btnSalvarJson.Click += new System.EventHandler(this.btnSalvarJson_Click);
             // 
+            // pbImagem
+            // 
+            this.pbImagem.BackColor = System.Drawing.Color.Transparent;
+            this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbImagem.Location = new System.Drawing.Point(19, 3);
+            this.pbImagem.Name = "pbImagem";
+            this.pbImagem.Size = new System.Drawing.Size(238, 181);
+            this.pbImagem.TabIndex = 27;
+            this.pbImagem.TabStop = false;
+            // 
             // BuscarPers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.btnSalvarJson);
             this.Controls.Add(this.txtImagemPath);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.lblResumo);
             this.Controls.Add(this.lstResultados);
             this.Controls.Add(this.btnBuscar);
@@ -152,9 +153,9 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ListBox lstResultados;
         private System.Windows.Forms.Label lblResumo;
-        private System.Windows.Forms.PictureBox pbImagem;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TextBox txtImagemPath;
         private System.Windows.Forms.Button btnSalvarJson;
+        private System.Windows.Forms.PictureBox pbImagem;
     }
 }
