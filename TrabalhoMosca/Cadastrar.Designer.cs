@@ -44,6 +44,7 @@
             this.cbNome = new System.Windows.Forms.ComboBox();
             this.BtnAleatorio = new System.Windows.Forms.Button();
             this.pbImagem = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.SuspendLayout();
@@ -54,9 +55,10 @@
             this.lblNome.BackColor = System.Drawing.Color.Transparent;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNome.Location = new System.Drawing.Point(457, 35);
+            this.lblNome.Location = new System.Drawing.Point(609, 43);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.Size = new System.Drawing.Size(47, 16);
             this.lblNome.TabIndex = 13;
             this.lblNome.Text = "Nome:";
             // 
@@ -65,9 +67,10 @@
             this.btnEscolherImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.btnEscolherImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscolherImagem.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEscolherImagem.Location = new System.Drawing.Point(480, 262);
+            this.btnEscolherImagem.Location = new System.Drawing.Point(640, 322);
+            this.btnEscolherImagem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEscolherImagem.Name = "btnEscolherImagem";
-            this.btnEscolherImagem.Size = new System.Drawing.Size(75, 23);
+            this.btnEscolherImagem.Size = new System.Drawing.Size(100, 28);
             this.btnEscolherImagem.TabIndex = 10;
             this.btnEscolherImagem.Text = "Imagem";
             this.btnEscolherImagem.UseVisualStyleBackColor = false;
@@ -79,9 +82,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(457, 78);
+            this.label2.Location = new System.Drawing.Point(609, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(38, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tipo:";
             // 
@@ -91,9 +95,10 @@
             this.lblRaca.BackColor = System.Drawing.Color.Transparent;
             this.lblRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRaca.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRaca.Location = new System.Drawing.Point(458, 128);
+            this.lblRaca.Location = new System.Drawing.Point(611, 158);
+            this.lblRaca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRaca.Name = "lblRaca";
-            this.lblRaca.Size = new System.Drawing.Size(36, 13);
+            this.lblRaca.Size = new System.Drawing.Size(43, 16);
             this.lblRaca.TabIndex = 2;
             this.lblRaca.Text = "Raça:";
             // 
@@ -103,9 +108,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(458, 176);
+            this.label4.Location = new System.Drawing.Point(611, 217);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nivel:";
             // 
@@ -115,41 +121,46 @@
             this.lblImagem.BackColor = System.Drawing.Color.Transparent;
             this.lblImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImagem.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblImagem.Location = new System.Drawing.Point(458, 222);
+            this.lblImagem.Location = new System.Drawing.Point(611, 273);
+            this.lblImagem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImagem.Name = "lblImagem";
-            this.lblImagem.Size = new System.Drawing.Size(47, 13);
+            this.lblImagem.Size = new System.Drawing.Size(59, 16);
             this.lblImagem.TabIndex = 4;
             this.lblImagem.Text = "Imagem:";
             // 
             // txtImagemPath
             // 
-            this.txtImagemPath.Location = new System.Drawing.Point(459, 238);
+            this.txtImagemPath.Location = new System.Drawing.Point(612, 293);
+            this.txtImagemPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtImagemPath.Name = "txtImagemPath";
-            this.txtImagemPath.Size = new System.Drawing.Size(121, 20);
+            this.txtImagemPath.Size = new System.Drawing.Size(160, 22);
             this.txtImagemPath.TabIndex = 9;
             // 
             // nudNivel
             // 
-            this.nudNivel.Location = new System.Drawing.Point(460, 192);
+            this.nudNivel.Location = new System.Drawing.Point(613, 236);
+            this.nudNivel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudNivel.Name = "nudNivel";
-            this.nudNivel.Size = new System.Drawing.Size(120, 20);
+            this.nudNivel.Size = new System.Drawing.Size(160, 22);
             this.nudNivel.TabIndex = 11;
             // 
             // cbTipo
             // 
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(460, 94);
+            this.cbTipo.Location = new System.Drawing.Point(613, 116);
+            this.cbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(121, 21);
+            this.cbTipo.Size = new System.Drawing.Size(160, 24);
             this.cbTipo.TabIndex = 14;
             this.cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
             // 
             // cbRaca
             // 
             this.cbRaca.FormattingEnabled = true;
-            this.cbRaca.Location = new System.Drawing.Point(459, 145);
+            this.cbRaca.Location = new System.Drawing.Point(612, 178);
+            this.cbRaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbRaca.Name = "cbRaca";
-            this.cbRaca.Size = new System.Drawing.Size(121, 21);
+            this.cbRaca.Size = new System.Drawing.Size(160, 24);
             this.cbRaca.TabIndex = 15;
             // 
             // btnSalvar
@@ -157,9 +168,10 @@
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSalvar.Location = new System.Drawing.Point(701, 369);
+            this.btnSalvar.Location = new System.Drawing.Point(935, 454);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(100, 28);
             this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -170,9 +182,10 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(701, 417);
+            this.btnCancelar.Location = new System.Drawing.Point(935, 513);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -181,9 +194,10 @@
             // cbNome
             // 
             this.cbNome.FormattingEnabled = true;
-            this.cbNome.Location = new System.Drawing.Point(461, 51);
+            this.cbNome.Location = new System.Drawing.Point(615, 63);
+            this.cbNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbNome.Name = "cbNome";
-            this.cbNome.Size = new System.Drawing.Size(121, 21);
+            this.cbNome.Size = new System.Drawing.Size(160, 24);
             this.cbNome.TabIndex = 18;
             // 
             // BtnAleatorio
@@ -191,9 +205,10 @@
             this.BtnAleatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.BtnAleatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAleatorio.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnAleatorio.Location = new System.Drawing.Point(339, 238);
+            this.BtnAleatorio.Location = new System.Drawing.Point(452, 293);
+            this.BtnAleatorio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnAleatorio.Name = "BtnAleatorio";
-            this.BtnAleatorio.Size = new System.Drawing.Size(75, 23);
+            this.BtnAleatorio.Size = new System.Drawing.Size(100, 28);
             this.BtnAleatorio.TabIndex = 19;
             this.BtnAleatorio.Text = "Random";
             this.BtnAleatorio.UseVisualStyleBackColor = false;
@@ -201,21 +216,36 @@
             // 
             // pbImagem
             // 
-            this.pbImagem.BackColor = System.Drawing.Color.Transparent;
+            this.pbImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.pbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbImagem.Location = new System.Drawing.Point(29, 12);
+            this.pbImagem.Location = new System.Drawing.Point(51, 10);
+            this.pbImagem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbImagem.Name = "pbImagem";
-            this.pbImagem.Size = new System.Drawing.Size(238, 181);
+            this.pbImagem.Size = new System.Drawing.Size(317, 223);
             this.pbImagem.TabIndex = 27;
             this.pbImagem.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Trajan Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(1029, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 25);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Cadastrar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.BtnAleatorio);
             this.Controls.Add(this.cbNome);
@@ -231,6 +261,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblRaca);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Cadastrar";
             this.Text = "Cadastrar";
             this.Load += new System.EventHandler(this.Cadastrar_Load);
@@ -257,5 +289,6 @@
         private System.Windows.Forms.ComboBox cbNome;
         private System.Windows.Forms.Button BtnAleatorio;
         private System.Windows.Forms.PictureBox pbImagem;
+        private System.Windows.Forms.Label label1;
     }
 }

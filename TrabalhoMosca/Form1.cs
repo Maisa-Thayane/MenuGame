@@ -40,5 +40,10 @@ namespace TrabalhoMosca
             var busca = new BuscarPers(this);
             busca.Show();
         }
+
+        private void lblSaida_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

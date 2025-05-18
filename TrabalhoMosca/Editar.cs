@@ -173,5 +173,10 @@ namespace TrabalhoMosca
             MessageBox.Show("Personagem excluído com sucesso!");
             AtualizarLista();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
