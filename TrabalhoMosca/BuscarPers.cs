@@ -55,8 +55,9 @@ namespace TrabalhoMosca
                 .ToList();
             var selecionado = filtrados[idx];
 
-            lblResumo.Text = selecionado.ExibirResumo();
-
+           
+                lblResumo.Text = selecionado.ExibirResumo();
+            
             string projectDir = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", ".."));
             string resourcesSpritesDir = Path.Combine(projectDir, "Resources", "Sprites");
             string fullPath = Path.Combine(resourcesSpritesDir, selecionado.ImagemPath);
