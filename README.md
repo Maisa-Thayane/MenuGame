@@ -2,7 +2,7 @@
 # Este repositório:
 - Contém linguagem C#
 - Utiliza configurações do WindowsForms
-- Possui design específico e desenvolvido com referÊncias de um jogo
+- Possui design específico e desenvolvido com referências de um jogo
 - Apresenta um menu de cadastro de personagens de jogos
 - É dividido com um colega que sala, que merece todos os créditos pela participação no projeto
 - Atitidade em sala de aula e horários remanescentes
